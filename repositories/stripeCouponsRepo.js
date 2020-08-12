@@ -2,7 +2,7 @@ const stripe = require('stripe')('sk_test_51HEUo9CYeDSGpG2wzCgbGbWo8it93bketsPQy
 const all=async()=>{
     
   const coupons=await stripe.coupons.list(
-      {limit: 3}
+      {limit: 10}
     ).catch((e)=>{ return e;});
     return coupons;
  };
